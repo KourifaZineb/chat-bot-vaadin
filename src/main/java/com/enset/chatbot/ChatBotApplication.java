@@ -1,7 +1,13 @@
 package com.enset.chatbot;
 
+import com.enset.chatbot.entities.Person;
+import com.enset.chatbot.repositories.PersonRepository;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import java.util.UUID;
 
 @SpringBootApplication
 public class ChatBotApplication {
@@ -10,4 +16,16 @@ public class ChatBotApplication {
 		SpringApplication.run(ChatBotApplication.class, args);
 	}
 
+	@Bean
+	CommandLineRunner commandLineRunner(PersonRepository personRepository){
+		return args -> {
+			for (int i = 0; i < 100; i++) {
+				Person person = Person.builder()
+						.name(UUID.randomUUID().toString().substring(0,8))
+						.email(UUID.randomUUID().toString().substring(0,8)+"@gmail.com")
+						.build();
+				personRepository.save(person);
+			}
+		};
+	}
 }

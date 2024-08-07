@@ -30,7 +30,7 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-markdown": "^9.0.1",
-    "react-router-dom": "6.23.1"
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@babel/preset-react": "7.24.7",
@@ -118,7 +118,7 @@
       "workbox-core": "7.1.0",
       "workbox-precaching": "7.1.0"
     },
-    "hash": "0d9df2e4f26b766100dd0528d435e0be89ca352a87ea33023e0d1d5d73e07d82"
+    "hash": "8a7297b16129d453ccae1d86fcb6844006e3fedc6c485efa54469ae990c1ef45"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
